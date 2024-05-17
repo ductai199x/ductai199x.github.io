@@ -9,10 +9,10 @@ export const TypingAnimation = ({prefix, postfixes, anim_options}) => {
     useEffect(() => {
         const options = {
             strings: postfixes,
-            typeSpeed: anim_options?.typeSpeed || 70,
-            backSpeed: anim_options?.backSpeed || 70,
+            typeSpeed: anim_options?.typeSpeed || 40,
+            backSpeed: anim_options?.backSpeed || 40,
             backDelay: anim_options?.backDelay || 1000,
-            startDelay: anim_options?.startDelay || 200,
+            startDelay: anim_options?.startDelay || 50,
             loop: true,
         };
 
@@ -25,7 +25,7 @@ export const TypingAnimation = ({prefix, postfixes, anim_options}) => {
 
     return (
         <div className="text-2xl font-bold">
-            <span className="font-black">{prefix} </span>
+            <span className="font-black">{prefix}&nbsp;&nbsp;</span>
             <span ref={el}></span>
         </div>
     );
